@@ -8,9 +8,14 @@ Este projeto trata-se de uma aplicação client-server com TypeScript, utilizand
 <h2>Como acessar</h2>
 <p>Acessando o CodeSpace, abra o terminal e execute os comandos:</p>
 
-        npm install -g
+        npm install @types/express --save-dev
+        npm install ts-node --save-dev
 
+<p>Execute o projeto usando:</p>
+        
         ts-node app.ts
+
+<p>Em seguida, no navegador, digite o endereço <b>localhost:3000</b></p>
 
 <h2>Linguagens utilizadas</h2>
 <div style="display: inline-block">
