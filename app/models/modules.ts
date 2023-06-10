@@ -19,7 +19,7 @@ function validateForm (form_info: Record<string, string>): boolean {
 
     return true;
 }
-  
+/**Tipo de dado para armazenar a resposta do servidor */
 export type Resposta = {
     validacao: boolean;
     mensagem: () => string;
