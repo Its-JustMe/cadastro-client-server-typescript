@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Meta Tags-->
+    <meta name="author" content="Arthur Santos">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links CSS-->
+    <link rel="stylesheet" href="/components/css/index.css" type="text/css">
+    <link rel="stylesheet" href="/components/css/reset.css" type="text/css">
+
+    <title>Inscrever-se - Campeonato de Xadrez</title>
+</head>
+<body>
+<div class="content-container">
+    <main>
+        <fieldset class="form-container">
+            <form method="post" action="/validate">
+                <div class="form-grid">
+                    <label for="input-email">
+                        Email
+                    </label>
+                    <label for="input-name">
+                        Nome
+                    </label>
+                    <input type="email" name="email" class="input-field" id="input-email" placeholder="Informe seu email">
+                    <input type="text" name="nome" class="input-field" id="input-name" placeholder="Informe seu nome">
+                </div>
+                <div class="form-grid">
+                    <label for="input-password">
+                        Senha
+                    </label>
+                    <label for="input-confirm-password">
+                        Confirmação de senha
+                    </label>
+                    <input type="password" name="senha"class="input-field" id="input-password" placeholder="Informe sua senha">
+                    <input type="password" name="confirm" class="input-field" id="input-confirm-password" placeholder="Confirme a senha">
+                </div>
+                <div class="input-container">
+                    <label for="input-address">
+                        Endereço
+                    </label>
+                    <input type="text" name="endereco" class="input-field" id="input-address" placeholder="Informe seu endereço">
+                </div>
+                <div class="input-container">
+                    <label for="input-msg">
+                        Mensagem
+                    </label>
+                    <textarea name="msg" id="input-msg" class="input-field msg-field" cols="30" rows="10" placeholder="Conte-nos mais sobre você"></textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="form-btn" id="form-btn">Enviar</button>
+                    <button type="submit" class="form-btn">limpar</button>
+                </div>
+                
+                <div id="resultado" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                    <!--Resposta Servidor-->
+                    <% if (resposta && resposta.mensagem) { %>
+                        <h3><%= resposta.mensagem() %></h3>
+                    <% } %>
+                </div>
+            </form>
+        </fieldset>
+    </main>
+
+    <aside class="contacts">
+        <div class="div-flex">
+            <div class="text-container">
+                <h1 class="top-heading">Entre em Contato</h1>
+                <a href="mailto:contato.arthursantosdev@gmail.com">
+                    <p>random123<wbr>@gmail.com</p>
+                </a>
+            </div>
+            <div class="text-container">
+                <h2 class="heading">Telefone</h2>
+                <p>1 (234) 234-567</p>
+            </div>
+            <div class="text-container">
+                <h2 class="heading">Local</h2>
+                <p>
+                    121 Rock Street, 21 Avenue, New York,
+                    NY 92103-9000
+                </p>
+            </div>
+        </div>
+    </aside>
+</div>
+</body>
+</html>
