@@ -22,7 +22,7 @@ router.post('/validate', function (req: Request, res: Response): void {
 
     const resposta = {
         validacao: validateForm(form_info),
-        mensagem: function () {
+        mensagem: function (): string {
             if (this.validacao) {
                 return 'Dados recebidos! Aguarde nosso contato.';
             } else {
