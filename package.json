@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && node dist/build.js"
-  },  
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
