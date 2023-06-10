@@ -1,5 +1,5 @@
 import express, { Request, Response, Router } from 'express';
-import validateForm from '../models/modules';
+import validateForm, { Resposta } from '../models/modules';
 
 const router: Router = express.Router();
 
@@ -20,7 +20,7 @@ router.post('/validate', function (req: Request, res: Response): void {
     };
       
 
-    const resposta = {
+    const resposta: Resposta = {
         validacao: validateForm(form_info),
         mensagem: function (): string {
             if (this.validacao) {
