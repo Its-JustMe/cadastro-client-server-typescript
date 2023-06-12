@@ -31,7 +31,6 @@ router.post('/validate', function (req: Request, res: Response): void {
         }
     };
     console.log(form_info);
-
     console.log(resposta.validacao);
 
     res.render('pages/index', { resposta: resposta });
