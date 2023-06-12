@@ -6,8 +6,8 @@
  */
 function validateForm (form_info: Record<string, string>): boolean {
     for (let info in form_info) {
-        if (info === undefined){
-            console.log('Undefined');
+        if (info === undefined || info === ''){
+            console.log(info, 'vazio');
             return false;
         }
     }
